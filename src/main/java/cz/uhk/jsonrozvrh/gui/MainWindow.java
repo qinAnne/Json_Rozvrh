@@ -65,14 +65,14 @@ public class MainWindow extends JFrame {
         }
     }
     public void setRozvrh(Akce r) {
-        if (r.rozvrhovaAkce != null) {
+        if (r.getRozvrhovaAkce() != null) {
             ArrayList<RozvrhovaAkce> vybraneAkce = new java.util.ArrayList<>();
-            for (RozvrhovaAkce akce : r.rozvrhovaAkce) {
-                if ("Cv".equals(akce.typAkceZkr) || "Př".equals(akce.typAkceZkr)) {
+            for (RozvrhovaAkce akce : r.getRozvrhovaAkce()) {
+                if ("Cv".equals(akce.getTypAkceZkr()) || "Př".equals(akce.getTypAkceZkr())) {
                     vybraneAkce.add(akce);
                 }
             }
-            r.rozvrhovaAkce = vybraneAkce;
+            r.setRozvrhovaAkce(vybraneAkce);
         }
     }
 }

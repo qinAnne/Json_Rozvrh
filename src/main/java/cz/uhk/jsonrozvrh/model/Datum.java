@@ -1,5 +1,9 @@
 package cz.uhk.jsonrozvrh.model;
 
 public class Datum {
-    public String value;
+    private String value;
+
+    public String getValue() {
+        return value;
+    }
 }

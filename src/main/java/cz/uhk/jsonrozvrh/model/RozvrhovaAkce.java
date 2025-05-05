@@ -1,52 +1,50 @@
 package cz.uhk.jsonrozvrh.model;
 
 public class RozvrhovaAkce {
-    public int roakIdno;
-    public String nazev;
-    public String katedra;
-    public String predmet;
-    public Object statut;
-    public int ucitIdno;
-    public Ucitel ucitel;
-    public String rok;
-    public String budova;
-    public String mistnost;
-    public int kapacitaMistnosti;
-    public int planObsazeni;
-    public int obsazeni;
-    public String typAkce;
-    public String typAkceZkr;
-    public String semestr;
-    public String platnost;
-    public String den;
-    public String denZkr;
-    public Object vyucJazyk;
-    public Object hodinaOd;
-    public Object hodinaDo;
-    public Object pocetVyucHodin;
-    public Datum hodinaSkutOd;
-    public Datum hodinaSkutDo;
-    public int tydenOd;
-    public int tydenDo;
-    public String tyden;
-    public String tydenZkr;
-    public int grupIdno;
-    public Object jeNadrazena;
-    public Object maNadrazenou;
-    public String kontakt;
-    public Object krouzky;
-    public Object casovaRada;
-    public Datum datum;
-    public Datum datumOd;
-    public Datum datumDo;
-    public String druhAkce;
-    public String vsichniUciteleUcitIdno;
-    public String vsichniUciteleJmenaTituly;
-    public String vsichniUciteleJmenaTitulySPodily;
-    public String vsichniUcitelePrijmeni;
-    public int referencedIdno;
-    public Object poznamkaRozvrhare;
-    public String nekonaSe;
-    public String owner;
-    public String zakazaneAkce;
+    private String nazev;
+    private String predmet;
+    //private Ucitel ucitel;
+    private String typAkceZkr;
+    private String den;
+    private Datum hodinaSkutOd;
+    private Datum hodinaSkutDo;
+    private String vsichniUciteleJmenaTituly;
+    private String vsichniUcitelePrijmeni;
+
+    public String getNazev() {
+        return nazev;
+    }
+
+    public String getPredmet() {
+        return predmet;
+    }
+
+//    public Ucitel getUcitel() {
+//        return ucitel;
+//    }
+
+    public String getTypAkceZkr() {
+        return typAkceZkr;
+    }
+
+    public String getDen() {
+        return den;
+    }
+
+    public Datum getHodinaSkutOd() {
+        return hodinaSkutOd;
+    }
+
+    public Datum getHodinaSkutDo() {
+        return hodinaSkutDo;
+    }
+
+    public String getVsichniUciteleJmenaTituly() {
+        return vsichniUciteleJmenaTituly;
+    }
+
+    public String getVsichniUcitelePrijmeni() {
+        return vsichniUcitelePrijmeni;
+    }
 }
+

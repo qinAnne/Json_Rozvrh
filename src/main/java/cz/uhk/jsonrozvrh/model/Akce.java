@@ -3,5 +3,13 @@ package cz.uhk.jsonrozvrh.model;
 import java.util.ArrayList;
 
 public class Akce {
-    public ArrayList<RozvrhovaAkce> rozvrhovaAkce;
+    private ArrayList<RozvrhovaAkce> rozvrhovaAkce;
+
+    public ArrayList<RozvrhovaAkce> getRozvrhovaAkce() {
+        return rozvrhovaAkce;
+    }
+
+    public void setRozvrhovaAkce(ArrayList<RozvrhovaAkce> rozvrhovaAkce) {
+        this.rozvrhovaAkce = rozvrhovaAkce;
+    }
 }

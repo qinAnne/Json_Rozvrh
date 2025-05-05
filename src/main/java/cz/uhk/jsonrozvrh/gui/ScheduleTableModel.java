@@ -15,27 +15,26 @@ public class ScheduleTableModel extends AbstractTableModel {
     }
 
     @Override public int getRowCount() {
-        if(schedule.rozvrhovaAkce == null){
+        if(schedule.getRozvrhovaAkce() == null){
             return 0;}
-            return schedule.rozvrhovaAkce.size();}
+            return schedule.getRozvrhovaAkce().size();}
     @Override public int getColumnCount() { return columns.length; }
     @Override public String getColumnName(int column) { return columns[column]; }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        RozvrhovaAkce item = schedule.rozvrhovaAkce.get(rowIndex);
-        String jmeno = "";
-        if(item.ucitel == null){
-            jmeno = "neni";
+        RozvrhovaAkce item = schedule.getRozvrhovaAkce().get(rowIndex);
+        String ucitel = item.getVsichniUciteleJmenaTituly() + " " + item.getVsichniUcitelePrijmeni();
+        if(ucitel.equals(" ")){
+            ucitel = "neni";
         }
-        else {jmeno = item.ucitel.jmeno + " " + item.ucitel.prijmeni;}
         return switch (columnIndex) {
-            case 0 -> item.predmet;
-            case 1 -> item.nazev;
-            case 2 -> item.den;
-            case 3 -> item.hodinaSkutOd.value;
-            case 4 -> item.hodinaSkutDo.value;
-            case 5 -> jmeno;
+            case 0 -> item.getPredmet();
+            case 1 -> item.getNazev();
+            case 2 -> item.getDen();
+            case 3 -> item.getHodinaSkutOd().getValue();
+            case 4 -> item.getHodinaSkutDo().getValue();
+            case 5 -> ucitel;
             default -> "";
         };
     }
